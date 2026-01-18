@@ -2,72 +2,92 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 
-// Load environment variables
 dotenv.config()
 
-// Import routes
+const app = express()
+const PORT = process.env.PORT || 3001
+
+/* ======================================================
+   ✅ CORS — MUST BE FIRST
+====================================================== */
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:3000',
+    'https://databridge-solutions.vercel.app'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}))
+
+/* ======================================================
+   ✅ BODY PARSERS — MUST BE BEFORE ROUTES
+====================================================== */
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+/* ======================================================
+   🔍 Request Logger (optional but useful)
+====================================================== */
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} | ${req.method} ${req.path}`)
+  next()
+})
+
+/* ======================================================
+   📦 ROUTES
+====================================================== */
 import jobsRoutes from './routes/jobs.routes.js'
 import applicationsRoutes from './routes/applications.routes.js'
 import contactRoutes from './routes/contact.routes.js'
 import authRoutes, { adminRouter } from './routes/auth.routes.js'
 
-// Initialize Express app
-const app = express()
-const PORT = process.env.PORT || 3001
-
-/**
- * Middleware Configuration
- */
-app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'http://localhost:5174',
-        'https://databridge-solutions.vercel.app'
-    ],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}))
-
-
-/**
- * API Routes
- */
 app.use('/api/jobs', jobsRoutes)
 app.use('/api/applications', applicationsRoutes)
 app.use('/api/contact', contactRoutes)
 app.use('/api/auth', authRoutes)
 app.use('/api/admin', adminRouter)
 
-// Health check endpoint
+/* ======================================================
+   ❤️ Health Check
+====================================================== */
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', timestamp: new Date().toISOString() })
+  res.json({
+    status: 'ok',
+    environment: process.env.NODE_ENV,
+    time: new Date().toISOString()
+  })
 })
 
-// 404 handler
+/* ======================================================
+   ❌ 404 Handler
+====================================================== */
 app.use((req, res) => {
-    res.status(404).json({ message: 'Endpoint not found' })
+  res.status(404).json({ message: 'API endpoint not found' })
 })
 
-// Global error handler
+/* ======================================================
+   💥 Global Error Handler
+====================================================== */
 app.use((err, req, res, next) => {
-    console.error('Error:', err)
-    res.status(500).json({ message: 'Internal server error' })
+  console.error('SERVER ERROR:', err)
+  res.status(500).json({ message: 'Internal server error' })
 })
 
-/**
- * Start Server
- */
+/* ======================================================
+   🚀 START SERVER
+====================================================== */
 app.listen(PORT, () => {
-    console.log(`
-  ╔══════════════════════════════════════════╗
-  ║   DataBridge Solutions API Server        ║
-  ╠══════════════════════════════════════════╣
-  ║   Status: Running                        ║
-  ║   Port:   ${PORT}                            ║
-  ║   Mode:   ${process.env.NODE_ENV || 'development'}                     ║
-  ╚══════════════════════════════════════════╝
-  `)
+  console.log(`
+========================================
+ DataBridge Solutions API 🚀
+----------------------------------------
+ Status : RUNNING
+ Port   : ${PORT}
+ Env    : ${process.env.NODE_ENV}
+========================================
+`)
 })
 
 export default app
