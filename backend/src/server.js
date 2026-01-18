@@ -19,17 +19,16 @@ const PORT = process.env.PORT || 3001
  * Middleware Configuration
  */
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://databridge-solutions.onrender.com'],
+    origin: [
+        'http://localhost:5173',
+        'http://localhost:5174',
+        'https://databridge-solutions.vercel.app'
+    ],
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }))
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
 
-// Request logging middleware
-app.use((req, res, next) => {
-    console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`)
-    next()
-})
 
 /**
  * API Routes
