@@ -8,6 +8,9 @@ import { sendMail } from '../utils/mailer.js'
  */
 
 // Get all applications (admin only)
+
+const GOOGLE_MEET_LINK = process.env.GOOGLE_MEET_LINK || 'https://meet.google.com'
+
 export async function getAllApplications(req, res) {
     try {
         const result = await query(
