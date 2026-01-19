@@ -148,25 +148,24 @@ export async function updateApplicationStatus(req, res) {
         }
 
         // ✅ Interview Shortlisted
-       if (status === 'interviewed') {
-    const meetLink = process.env.GOOGLE_MEET_LINK
-
+      if (status === 'interviewed') {
     subject = `Interview Invitation – ${jobTitle}`
     html = `
         <p>Dear ${application.name},</p>
-        <p>We are pleased to inform you that you have been <strong>shortlisted for an interview</strong> for the role of <strong>${jobTitle}</strong>.</p>
-
-        <p><strong>Interview Details:</strong></p>
-        <ul>
-            <li>Mode: Google Meet</li>
-            <li>Meeting Link: <a href="${meetLink}">${meetLink}</a></li>
-        </ul>
-
+        <p>You have been shortlisted for the <strong>${jobTitle}</strong> role.</p>
+        <p>Interview Mode: Google Meet</p>
+        <p>Meeting link will be shared separately.</p>
+        <br/>
+        <p>Regards,<br/>DataBridge Solutions HR</p>
         <p>Our recruitment team will contact you shortly with the interview schedule.</p>
         <br/>
         <p>Best regards,<br/>DataBridge Solutions HR Team</p>
     `
 }
+
+
+     
+
 
 
         // ✅ Selected / Hired
