@@ -1,36 +1,20 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
-/**
- * Mail Transporter Configuration
- * Uses SMTP (Gmail / Outlook / custom SMTP)
- */
-const transporter = nodemailer.createTransport({
-    host: process.env.MAIL_HOST,
-    port: process.env.MAIL_PORT,
-    secure: process.env.MAIL_SECURE === 'true', // true for 465, false for others
-    auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
-    },
-})
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-/**
- * Send email helper
- * @param {Object} options
- */
 export async function sendMail({ to, subject, html }) {
     try {
-        await transporter.sendMail({
-            from: `"DataBridge Solutions" <${process.env.MAIL_USER}>`,
+        await resend.emails.send({
+            from: 'DataBridge Solutions <no-reply@databridge.com>',
             to,
             subject,
             html,
         })
+        console.log('Email sent to:', to)
     } catch (error) {
         console.error('Email send error:', error)
-        // Email failure should NOT crash API
     }
 }
