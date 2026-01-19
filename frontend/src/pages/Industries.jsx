@@ -8,13 +8,10 @@ import { Link } from 'react-router-dom'
 function Industries() {
     const industries = [
         { id: 1, name: 'Healthcare', description: 'Predictive diagnostics and patient care optimization', icon: '❤️', stats: '40% faster diagnostics', color: 'bg-rose-500' },
-        { id: 2, name: 'Finance', description: 'Real-time analytics and fraud detection', icon: '💰', stats: '60% fraud reduction', color: 'bg-emerald-500' },
-        { id: 3, name: 'Manufacturing', description: 'Production optimization and predictive maintenance', icon: '🏭', stats: '35% less downtime', color: 'bg-amber-500' },
-        { id: 4, name: 'Retail', description: 'Personalization and inventory optimization', icon: '🛒', stats: '25% more conversions', color: 'bg-indigo-500' },
-        { id: 5, name: 'Energy', description: 'Smart grid analytics and consumption forecasting', icon: '⚡', stats: '20% cost savings', color: 'bg-yellow-500' },
-        { id: 6, name: 'Telecom', description: 'Network optimization and churn prediction', icon: '📡', stats: '45% churn reduction', color: 'bg-cyan-500' },
-        { id: 7, name: 'Logistics', description: 'Route optimization and fleet management', icon: '🚚', stats: '30% cost reduction', color: 'bg-violet-500' },
-        { id: 8, name: 'Education', description: 'Learning analytics and student success prediction', icon: '🎓', stats: '50% better outcomes', color: 'bg-teal-500' },
+        { id: 2, name: ' Banking & Finance', description: 'Real-time analytics and fraud detection', icon: '💰', stats: '60% fraud reduction', color: 'bg-emerald-500' },
+        { id: 3, name: 'Publishing', description: 'Content digitization, XML conversion, and end-to-end publishing workflow support', icon: '📚', stats: '50% faster turnaround', color: 'bg-indigo-500' },
+       { id: 4, name: 'E-Commerce', description: 'Product data management, catalog processing, and order support services', icon: '🛒', stats: '45% faster order processing', color: 'bg-emerald-500' },
+        { id: 5, name: 'Education', description: 'Learning analytics and student success prediction', icon: '🎓', stats: '50% better outcomes', color: 'bg-teal-500' },
     ]
 
     return (

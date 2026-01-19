@@ -14,7 +14,7 @@ function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
             ),
-            title: 'XML Conversion Services',
+            title: 'XML Conversion & Processing',
             description:
                 'Accurate and scalable XML conversion services for publishers, enterprises, and digital platforms. We convert complex data into structured, industry-standard XML formats.',
             features: ['DTD / XSD compliance', 'Large-volume conversion', 'Multi-format support', '99.9% accuracy'],
@@ -27,7 +27,7 @@ function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7" />
                 </svg>
             ),
-            title: 'Data Processing & Management',
+            title: 'Data Entry & Data Management',
             description:
                 'End-to-end data processing services designed to handle high-volume, mission-critical business data with precision, confidentiality, and speed.',
             features: ['Data validation', 'Data cleansing', 'Structured workflows', 'Secure handling'],
@@ -40,7 +40,7 @@ function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
             ),
-            title: 'Digitization Services',
+            title: 'Document Digitization',
             description:
                 'Convert physical documents into high-quality, searchable digital formats. Our digitization services ensure long-term accessibility and compliance.',
             features: ['Document scanning', 'OCR processing', 'Indexing & tagging', 'Archive digitization'],
@@ -53,7 +53,7 @@ function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4" />
                 </svg>
             ),
-            title: 'Quality Check & Validation',
+            title: 'Data Validation & Quality Check',
             description:
                 'Multi-layer quality assurance processes to ensure error-free delivery. Every project undergoes strict validation to meet global quality standards.',
             features: ['Manual + automated QC', 'Process audits', 'Accuracy reporting', 'Client-specific checks'],
@@ -66,25 +66,13 @@ function Services() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-3.314 0-6 2.686-6 6v3h12v-3c0-3.314-2.686-6-6-6z" />
                 </svg>
             ),
-            title: 'BPO & Back-Office Support',
+            title: 'IT & Business Process Outsourcing (BPO) services',
             description:
                 'Reliable BPO services that streamline business operations. We act as an extension of your team, delivering consistency and scalability.',
             features: ['Data entry', 'Back-office operations', '24/7 support', 'Cost optimization'],
             color: 'from-orange-500 to-red-600',
         },
-        {
-            id: 6,
-            icon: (
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z" />
-                </svg>
-            ),
-            title: 'Data Security & Compliance',
-            description:
-                'Enterprise-grade data security practices to protect sensitive information and ensure compliance with international standards.',
-            features: ['Secure infrastructure', 'Access controls', 'Compliance-ready workflows', 'Confidential handling'],
-            color: 'from-rose-500 to-pink-600',
-        },
+       
     ]
 
     return (
@@ -130,9 +118,7 @@ function Services() {
                                     </li>
                                 ))}
                             </ul>
-                            <Link to="/contact" className="text-indigo-600 dark:text-indigo-400 font-medium">
-                                Learn More →
-                            </Link>
+                            
                         </motion.div>
                     ))}
                 </div>

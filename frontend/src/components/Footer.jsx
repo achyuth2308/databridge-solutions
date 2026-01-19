@@ -22,17 +22,21 @@ function Footer() {
         {
             title: 'Services',
             links: [
-                { name: 'Data Analytics', path: '/services' },
-                { name: 'Cloud Solutions', path: '/services' },
-                { name: 'Consulting', path: '/services' },
+                { name: 'XML Conversion & Processing', path: '/services' },
+                { name: 'Data Entry & Data Management', path: '/services' },
+                { name: 'Document Digitization', path: '/services' },
+                { name: 'Data Validation & Quality Check', path: '/services' },
+                { name: 'IT & BPO Support Services', path: '/services' },
             ],
         },
         {
             title: 'Industries',
             links: [
                 { name: 'Healthcare', path: '/industries' },
-                { name: 'Finance', path: '/industries' },
-                { name: 'Manufacturing', path: '/industries' },
+                { name: 'Banking & Finance', path: '/industries' },
+                { name: 'E-Commerce', path: '/industries' },
+                { name: 'Publishing', path: '/industries' },
+                { name: 'Education', path: '/industries' },
             ],
         },
     ]

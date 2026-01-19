@@ -30,47 +30,58 @@ function Home({ onCallbackClick }) {
 
     // Services preview data
     const services = [
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            ),
-            title: 'XML Conversion',
-            description: 'Accurate XML conversion services ensuring structured, standards-compliant data delivery.',
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M9 17v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6" />
-                </svg>
-            ),
-            title: 'Data Processing',
-            description: 'High-volume data entry, cleansing, validation, and transformation with strict quality checks.',
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M8 7h8M8 11h8M8 15h6" />
-                </svg>
-            ),
-            title: 'Data Digitization',
-            description: 'Secure digitization of physical documents into searchable, structured digital formats.',
-        },
-        {
-            icon: (
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M12 6v6l4 2" />
-                </svg>
-            ),
-            title: 'BPO Support',
-            description: 'End-to-end back-office support to streamline operations and reduce overhead.',
-        },
-    ]
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    ),
+    title: 'XML Conversion & Processing',
+    description: 'Accurate XML conversion services ensuring structured, standards-compliant data delivery.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M9 17v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6" />
+      </svg>
+    ),
+    title: 'Data Entry & Data Management',
+    description: 'High-volume data entry, cleansing, validation, and transformation with strict quality checks.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M8 7h8M8 11h8M8 15h6" />
+      </svg>
+    ),
+    title: 'Document Digitization',
+    description: 'Secure digitization of physical documents into searchable, structured digital formats.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M12 6v6l4 2" />
+      </svg>
+    ),
+    title: 'Data Validation & Quality Check',
+    description: 'Multi-layer data validation processes to ensure accuracy and integrity.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+          d="M12 6v6l4 2" />
+      </svg>
+    ),
+    title: 'IT & BPO Support Services',
+    description: 'Scalable IT-enabled business process outsourcing solutions tailored for enterprises.',
+  },
+]
+
 
     // Why choose us features
     const features = [

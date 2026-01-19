@@ -121,16 +121,83 @@ function Careers() {
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <div><label className="form-label">Full Name *</label><input type="text" name="name" value={formData.name} onChange={handleChange} required className="form-input" /></div>
-                            <div><label className="form-label">Email *</label><input type="email" name="email" value={formData.email} onChange={handleChange} required className="form-input" /></div>
-                            <div><label className="form-label">Phone *</label><input type="tel" name="phone" value={formData.phone} onChange={handleChange} required className="form-input" /></div>
-                            <div><label className="form-label">Resume URL *</label><input type="url" name="resumeUrl" value={formData.resumeUrl} onChange={handleChange} required className="form-input" placeholder="https://drive.google.com/..." /></div>
-                            <div><label className="form-label">Cover Letter</label><textarea name="coverLetter" value={formData.coverLetter} onChange={handleChange} rows={4} className="form-input resize-none" /></div>
-                            <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="submit" disabled={isSubmitting} className="w-full btn-primary py-4">
-                                {isSubmitting ? 'Submitting...' : 'Submit Application'}
-                            </motion.button>
-                        </form>
+                       <form onSubmit={handleSubmit} className="space-y-4">
+  <div>
+    <label className="form-label">Full Name *</label>
+    <input
+      type="text"
+      name="name"
+      value={formData.name}
+      onChange={handleChange}
+      required
+      minLength={3}
+      pattern="[A-Za-z ]+"
+      className="form-input"
+    />
+  </div>
+
+  <div>
+    <label className="form-label">Email *</label>
+    <input
+      type="email"
+      name="email"
+      value={formData.email}
+      onChange={handleChange}
+      required
+      className="form-input"
+    />
+  </div>
+
+  <div>
+    <label className="form-label">Phone *</label>
+    <input
+      type="tel"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      required
+      pattern="[0-9]{10}"
+      className="form-input"
+    />
+  </div>
+
+  <div>
+    <label className="form-label">Resume URL *</label>
+    <input
+      type="url"
+      name="resumeUrl"
+      value={formData.resumeUrl}
+      onChange={handleChange}
+      required
+      pattern="https?://.+"
+      className="form-input"
+      placeholder="https://drive.google.com/..."
+    />
+  </div>
+
+  <div>
+    <label className="form-label">Cover Letter</label>
+    <textarea
+      name="coverLetter"
+      value={formData.coverLetter}
+      onChange={handleChange}
+      rows={4}
+      minLength={20}
+      className="form-input resize-none"
+    />
+  </div>
+
+  <motion.button
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    type="submit"
+    disabled={isSubmitting}
+    className="w-full btn-primary py-4"
+  >
+    {isSubmitting ? 'Submitting...' : 'Submit Application'}
+  </motion.button>
+</form>
+
                     </motion.div>
                 </motion.div>
             )}
