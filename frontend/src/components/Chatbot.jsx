@@ -30,7 +30,7 @@ function Chatbot() {
         const lowerQuery = query.toLowerCase()
 
         if (lowerQuery.includes('service') || lowerQuery.includes('what do you')) {
-            return 'We offer comprehensive data solutions including Data Analytics, Cloud Migration, Business Intelligence, AI/ML Solutions, and IT Consulting. Would you like more details about any specific service?'
+            return 'We offer comprehensive data solutions including XML Conversion & Processing,Data Entry & Data Management,Document Digitalization,Data Validation & Quality Check ,It & BPO Support Services . Would you like more details about any specific service?'
         }
         if (lowerQuery.includes('contact') || lowerQuery.includes('reach') || lowerQuery.includes('call')) {
             return 'You can reach us at info@databridge.com or call +1 (234) 567-890. You can also use the Contact page to send us a message, or request a callback using the button in our navigation!'
@@ -219,3 +219,4 @@ function Chatbot() {
 }
 
 export default Chatbot
+23
