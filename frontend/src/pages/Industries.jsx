@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
  */
 function Industries() {
     const industries = [
-        { id: 1, name: 'Healthcare', description: 'Predictive diagnostics and patient care optimization', icon: '❤️', stats: '40% faster diagnostics', color: 'bg-rose-500' },
-        { id: 2, name: ' Banking & Finance', description: 'Real-time analytics and fraud detection', icon: '💰', stats: '60% fraud reduction', color: 'bg-emerald-500' },
-        { id: 3, name: 'Publishing', description: 'Content digitization, XML conversion, and end-to-end publishing workflow support', icon: '📚', stats: '50% faster turnaround', color: 'bg-indigo-500' },
-       { id: 4, name: 'E-Commerce', description: 'Product data management, catalog processing, and order support services', icon: '🛒', stats: '45% faster order processing', color: 'bg-emerald-500' },
-        { id: 5, name: 'Education', description: 'Learning analytics and student success prediction', icon: '🎓', stats: '50% better outcomes', color: 'bg-teal-500' },
+        { id: 'healthcare', name: 'Healthcare', description: 'Predictive diagnostics and patient care optimization', icon: '❤️', stats: '40% faster diagnostics', color: 'bg-rose-500' },
+        { id: 'banking-finance', name: ' Banking & Finance', description: 'Real-time analytics and fraud detection', icon: '💰', stats: '60% fraud reduction', color: 'bg-emerald-500' },
+        { id: 'publishing', name: 'Publishing', description: 'Content digitization, XML conversion, and end-to-end publishing workflow support', icon: '📚', stats: '50% faster turnaround', color: 'bg-indigo-500' },
+       { id: 'e-commerce', name: 'E-Commerce', description: 'Product data management, catalog processing, and order support services', icon: '🛒', stats: '45% faster order processing', color: 'bg-emerald-500' },
+        { id: 'education', name: 'Education', description: 'Learning analytics and student success prediction', icon: '🎓', stats: '50% better outcomes', color: 'bg-teal-500' },
     ]
 
     return (
@@ -32,7 +32,7 @@ function Industries() {
                 <div className="section-container">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {industries.map((ind, i) => (
-                            <motion.div key={ind.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="glass-card p-6 card-hover group">
+                            <motion.div id={ind.id}  key={ind.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} className="glass-card p-6 card-hover group">
                                 <div className={`w-16 h-16 rounded-2xl ${ind.color} flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform`}>{ind.icon}</div>
                                 <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">{ind.name}</h3>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">{ind.description}</p>
