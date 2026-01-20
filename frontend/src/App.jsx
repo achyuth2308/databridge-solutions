@@ -7,6 +7,8 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Chatbot from './components/Chatbot.jsx'
 import CallbackModal from './components/CallbackModal.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
+
 
 // Pages
 import Home from './pages/Home.jsx'
@@ -29,6 +31,7 @@ function App() {
 
     return (
         <div className={`min-h-screen flex flex-col ${isDark ? 'dark' : ''}`}>
+               <ScrollToTop />
             <div className="min-h-screen flex flex-col bg-white dark:bg-slate-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
                 {/* Hide navbar on admin routes */}
                 {!location.pathname.startsWith('/admin') && (
@@ -39,11 +42,11 @@ function App() {
                     <AnimatePresence mode="wait">
                         <Routes location={location} key={location.pathname}>
                             <Route path="/" element={<Home onCallbackClick={() => setIsCallbackOpen(true)} />} />
+                            <Route path="/about" element={<About />} />
                             <Route path="/services" element={<Services />} />
                             <Route path="/industries" element={<Industries />} />
                             <Route path="/careers" element={<Careers />} />
                             <Route path="/contact" element={<Contact />} />
-                            <Route path="/about" element={<About />} />
                             <Route path="/admin/*" element={<Admin />} />
                         </Routes>
                     </AnimatePresence>

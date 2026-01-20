@@ -17,10 +17,10 @@ function Navbar({ onCallbackClick }) {
     // Navigation links configuration
     const navLinks = [
         { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
         { name: 'Industries', path: '/industries' },
         { name: 'Careers', path: '/careers' },
-        { name: 'About', path: '/about' },
         { name: 'Contact', path: '/contact' },
     ]
 
