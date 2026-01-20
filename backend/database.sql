@@ -72,8 +72,12 @@ CREATE INDEX IF NOT EXISTS idx_contact_status ON contact_queries(status);
 -- ============================================
 -- Note: The hash below is for 'admin123' using bcrypt
 -- You should generate a new hash for production
-INSERT INTO admin_users (username, email, password_hash) 
-VALUES ('admin', 'admin@databridge.com', '$2a$10$8K1p/a0dL1LXMw8k5rR5CeJL5Fo5XJJG3F5LK5Jl5YqT5Jy5Y5R5Y')
+INSERT INTO admin_users (username, email, password_hash)
+VALUES (
+  'admin',
+  'admin@databridge.com',
+  '$2a$10$Tw0oKOH4uyUXVXO/924bNOTHQozlOGfQL6K8j/XfwGjgxjrKI693O'
+)
 ON CONFLICT (username) DO NOTHING;
 
 -- ============================================
