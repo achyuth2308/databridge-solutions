@@ -69,7 +69,7 @@ function Services() {
       Professional Data Services
     </h1>
     <p className="text-lg md:text-xl mb-8">
-      Accurate, secure, and scalable solutions for XML Conversion and Processing, Document Digitization, Data Entry & Data Management, Data Validation & Quality Check,IT & BPO services.
+      Accurate, secure, and scalable solutions for XML Conversion and Processing, Document Digitalization, Data Entry & Data Management, Data Validation & Quality Check,IT & BPO services.
     </p>
     <Link
       to="/contact"
