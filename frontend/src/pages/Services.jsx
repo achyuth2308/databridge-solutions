@@ -54,9 +54,9 @@ function Services() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen pt-20">
 <section
-  className="relative w-full h-[520px] md:h-[620px] flex items-center justify-center overflow-hidden"
+  className="relative w-full h-[550px] md:h-[650px] flex items-center justify-center overflow-hidden"
   style={{
-    backgroundImage: 'url(Service.png)', // path to your generated image
+    backgroundImage: 'url(Service.png)', 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}
@@ -87,7 +87,7 @@ function Services() {
                     {services.map((service, index) => (
                         <motion.div
                             key={service.id}
-                            id={service.id}   // 🔥 REQUIRED FOR HASH NAVIGATION
+                            id={service.id}   
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
