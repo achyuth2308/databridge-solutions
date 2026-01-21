@@ -63,76 +63,71 @@ function Contact() {
                                 </div>
                             )}
 
-                            <form onSubmit={handleSubmit} className="space-y-4">
-  <div className="grid sm:grid-cols-2 gap-4">
-    <div>
-      <label className="form-label">Full Name *</label>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        minLength={3}
-        pattern="[A-Za-z ]+"
-        className="form-input"
-      />
-    </div>
-
-    <div>
-      <label className="form-label">Email *</label>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className="form-input"
-      />
-    </div>
-  </div>
-
-  <div className="grid sm:grid-cols-2 gap-4">
-    <div>
-      <label className="form-label">Phone *</label>
-      <input
-        type="tel"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-        pattern="[0-9]{10}"
-        className="form-input"
-      />
-    </div>
-
-    <div>
-      <label className="form-label">Subject *</label>
-      <input
-        type="text"
-        name="subject"
-        value={formData.subject}
-        onChange={handleChange}
-        required
-        minLength={5}
-        className="form-input"
-      />
-    </div>
-  </div>
-
-  <div>
-    <label className="form-label">Message *</label>
-    <textarea
-      name="message"
-      value={formData.message}
-      onChange={handleChange}
-      required
-      minLength={10}
-      rows={5}
-      className="form-input resize-none"
-    />
-  </div>
-
+        <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                    <label className="form-label">Full Name *</label>
+                     <input  type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        minLength={3}
+                        pattern="[A-Za-z ]+"
+                        className="form-input"
+                        />
+                        </div>
+                        <div>
+                    <label className="form-label">Email *</label>
+                     <input
+                       type="email"
+                       name="email"
+                       value={formData.email}
+                       onChange={handleChange}
+                       required
+                       className="form-input"
+                     />
+                       </div>
+                        </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="form-label">Phone *</label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        pattern="[0-9]{10}"
+                        className="form-input"
+                     />
+                    </div>
+                    </div>
+                     <div>
+                       <label className="form-label">Subject*
+                        </label>
+                             <input
+                               type="text"
+                               name="subject"
+                               value={formData.subject}
+                               onChange={handleChange}
+                               required
+                              minLength={3} className="form-input"
+                             />
+                            </div>
+                            <br></br>
+                <div>
+                    <label className="form-label">Message *</label>
+                     <textarea
+                       name="message"
+                       value={formData.message}
+                       onChange={handleChange}
+                       required
+                       minLength={10}
+                       rows={5}
+                       className="form-input resize-none"
+                    />
+                    </div>
   <motion.button
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
@@ -188,3 +183,4 @@ function Contact() {
 }
 
 export default Contact
+
