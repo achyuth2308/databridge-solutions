@@ -65,7 +65,7 @@ function About() {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-                                Who We Are
+                                Company Overview
                             </h2>
                             <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
                                 We specialize in delivering accurate, secure, and scalable data services
@@ -131,6 +131,77 @@ function About() {
                     </div>
                 </div>
             </section>
+             {/* Vision & Mission */}
+
+<div className="grid md:grid-cols-2 gap-6 md:gap-10 mt-10 max-w-4xl mx-auto">
+
+  
+  {/* Vision */}
+  <motion.div
+    whileHover={{
+      y: -8,
+      scale: 1.02,
+      boxShadow: '0 20px 40px rgba(99,102,241,0.25)',
+    }}
+    transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+    className="glass-card p-7 cursor-pointer"
+  >
+    <motion.div
+      whileHover={{ rotate: 5 }}
+      className="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-3xl text-white"
+    >
+      🌟
+    </motion.div>
+
+    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+      Our Vision
+    </h3>
+
+    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+      To become a globally recognized digital transformation partner,
+      enabling organizations to innovate, scale, and succeed in an
+      ever-evolving technological landscape.
+    </p>
+
+    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+      We envision a future where businesses leverage data, automation,
+      and intelligent systems to unlock new opportunities and achieve
+      sustainable growth.
+    </p>
+  </motion.div>
+
+  {/* Mission */}
+  <motion.div
+    whileHover={{
+      y: -8,
+      scale: 1.02,
+      boxShadow: '0 20px 40px rgba(34,197,94,0.25)',
+    }}
+    transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+    className="glass-card p-8 cursor-pointer"
+  >
+    <motion.div
+      whileHover={{ rotate: -5 }}
+      className="w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-3xl text-white"
+    >
+      🎯
+    </motion.div>
+
+    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+      Our Mission
+    </h3>
+
+    <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+      <li>• Deliver high-quality IT & BPO solutions with precision and reliability.</li>
+      <li>• Build long-term partnerships through transparency and trust.</li>
+      <li>• Continuously innovate using modern technologies and best practices.</li>
+      <li>• Empower clients by transforming data into meaningful insights.</li>
+    </ul>
+  </motion.div>
+
+</div>
+
+
 
             {/* Values */}
             <section className="py-16 lg:py-24 bg-gray-50 dark:bg-slate-900">

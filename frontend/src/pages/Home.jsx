@@ -21,12 +21,12 @@ function Home({ onCallbackClick }) {
         {
             title: 'Precision-Driven Data Processing Services',
             subtitle: 'Structured, validated, and secure data workflows tailored to your business needs.',
-            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80',
+            image: '/Homeimage2.jpeg',
         },
         {
             title: 'Scalable BPO & IT-Enabled Services',
             subtitle: 'Cost-effective operational support with enterprise-grade quality and compliance.',
-            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80',
+            image: '/HomeImage3.jpeg',
         },
     ]
 
