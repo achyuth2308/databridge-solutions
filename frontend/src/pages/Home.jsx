@@ -14,7 +14,9 @@ function Home({ onCallbackClick }) {
         {
             title: 'Reliable Data & XML Solutions for Global Enterprises',
             subtitle: 'High-accuracy data processing, XML conversion, and back-office services you can trust.',
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80',
+            // image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80',
+            image: '/HomeImage.jpeg',
+             
         },
         {
             title: 'Precision-Driven Data Processing Services',

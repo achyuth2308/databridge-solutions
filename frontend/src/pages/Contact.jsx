@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { submitContactQuery } from '../api/api.js'
 
+
+
 /**
  * Contact Page Component
  * Contact form with PostgreSQL integration
@@ -50,7 +52,7 @@ function Contact() {
             </section>
 
             {/* Contact Form & Info */}
-            <section className="py-16 lg:py-24">
+            <section className="py-16 lg:py-26">
                 <div className="section-container">
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Form */}
@@ -63,71 +65,92 @@ function Contact() {
                                 </div>
                             )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                    <label className="form-label">Full Name *</label>
-                     <input  type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        minLength={3}
-                        pattern="[A-Za-z ]+"
-                        className="form-input"
-                        />
-                        </div>
-                        <div>
-                    <label className="form-label">Email *</label>
-                     <input
-                       type="email"
-                       name="email"
-                       value={formData.email}
-                       onChange={handleChange}
-                       required
-                       className="form-input"
-                     />
-                       </div>
-                        </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="form-label">Phone *</label>
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        pattern="[0-9]{10}"
-                        className="form-input"
-                     />
-                    </div>
-                    </div>
-                     <div>
-                       <label className="form-label">Subject*
-                        </label>
-                             <input
-                               type="text"
-                               name="subject"
-                               value={formData.subject}
-                               onChange={handleChange}
-                               required
-                              minLength={3} className="form-input"
-                             />
-                            </div>
-                            <br></br>
-                <div>
-                    <label className="form-label">Message *</label>
-                     <textarea
-                       name="message"
-                       value={formData.message}
-                       onChange={handleChange}
-                       required
-                       minLength={10}
-                       rows={5}
-                       className="form-input resize-none"
-                    />
-                    </div>
+                            <form onSubmit={handleSubmit} className="space-y-10">
+  <div className="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label className="form-label">Full Name *</label>
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+        minLength={3}
+        pattern="[A-Za-z ]+"
+        className="form-input"
+      />
+    </div>
+
+    <div>
+      <label className="form-label">Email *</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+        className="form-input"
+      />
+    </div>
+  </div>
+
+  <div className="grid sm:grid-cols-2 gap-4">
+    <div>
+      <label className="form-label">Phone *</label>
+      <input
+        type="tel"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        required
+        pattern="[0-9]{10}"
+        className="form-input"
+      />
+    </div>
+
+    <div>
+      <label className="form-label">Subject *</label>
+      {/* <input
+        type="text"
+        name="subject"
+        value={formData.subject}
+        onChange={handleChange}
+        required
+        minLength={5}
+        className="form-input"
+      /> */}
+      <select
+    name="subject"
+    value={formData.subject}
+    onChange={handleChange}
+    required
+    className="form-input"
+  >
+    <option value="">-- Select Purpose --</option>
+    <option value="new_client">New Client Inquiry</option>
+    <option value="existing_client">Existing Client Support</option>
+    <option value="partnership">Partnership / Collaboration</option>
+    <option value="sales_quote">Request for Quote / Proposal</option>
+    <option value="technical_support">Technical Support / Services</option>
+    <option value="career_opportunity">Career / Recruitment</option>
+    <option value="general_enquiry">General Enquiry</option>
+  </select>
+    </div>
+  </div>
+
+  <div>
+    <label className="form-label">Message *</label>
+    <textarea
+      name="message"
+      value={formData.message}
+      onChange={handleChange}
+      required
+      minLength={10}
+      rows={5}
+      className="form-input resize-none"
+    />
+  </div>
+
   <motion.button
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
@@ -183,4 +206,3 @@ function Contact() {
 }
 
 export default Contact
-
