@@ -134,6 +134,7 @@ function About() {
              {/* Vision & Mission */}
 
 <div className="grid md:grid-cols-2 gap-6 md:gap-10 mt-10 max-w-4xl mx-auto">
+
   
   {/* Vision */}
   <motion.div
