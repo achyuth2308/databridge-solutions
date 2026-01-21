@@ -18,4 +18,3 @@ router.post('/', createApplication)
 router.patch('/:id/status', authenticateToken, updateApplicationStatus)
 
 export default router
-// shubham added something
